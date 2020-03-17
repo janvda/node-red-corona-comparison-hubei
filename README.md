@@ -5,7 +5,7 @@ node-red-corona-comparison-hubei
 
 This node-red flow is creating a dashboard showing the historical statistics of the corona deaths and corona confirmed cases for the selected country or province/state.
 
-The statistics are retrieved from from https://github.com/CSSEGISandData/COVID-19
+The statistics are retrieved from https://github.com/CSSEGISandData/COVID-19
 
 It also puts in the same charts the statistics for the province Hubei (China) were the outbreak began.  To make comparison easy I have scaled and shifted the chart for Hubei.
 
@@ -14,7 +14,7 @@ The time shift (`"hubei date shift"`) is determined by the `"lock down date"` th
 The `"hubei factor"` is the factor used to scale the Hubei deaths and Hubei confirmed cases in the charts.  The `"hubei factor"` is calculated as the ratio of the current total number of deaths for the selected country or province over the total number of deaths in Hubei at corresponding date relative to the start of lock down. 
 
 # Usage
-At startup this flow will read the statistics from a local file `covid.json`.  The very first time this local file will not exist and an error message is reported in the dashboard (this is normal).
+At startup this flow will read the statistics from a local file `"covid.json"`.  The very first time this local file will not exist and an error message is reported in the dashboard (this is normal).
 So in that case you must retrieve the data from Github by clicking on the button `retrieve data from github`.
 Note that this takes several minutes.  You will even loose your browser connection.  This is expected.  Just be patient and you will be automatically reconnected.  If everything is fine then this data is also stored in the local file.
 

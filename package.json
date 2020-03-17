@@ -1,6 +1,6 @@
 {
     "name": "node-red-corona-comparison-hubei",
-    "description": "A Node-RED Project",
+    "description": "A Node-RED flow allowing to compare historical corona data of a country with Hubei (China)",
     "version": "0.0.1",
     "dependencies": {
         "node-red-dashboard": "2.19.4"

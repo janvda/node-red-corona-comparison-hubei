@@ -13,6 +13,10 @@ The time shift (`"hubei date shift"`) is determined by the `"lock down date"` th
 
 The `"hubei factor"` is the factor used to scale the Hubei deaths and Hubei confirmed cases in the charts.  The `"hubei factor"` is calculated as the ratio of the current total number of deaths for the selected country or province over the total number of deaths in Hubei at corresponding date relative to the start of lock down. 
 
+# Examples
+
+See Node-RED forum thread: [Corona country comparison with Hubei (China)](https://discourse.nodered.org/t/flow-corona-country-comparison-with-hubei-china/23237)
+
 # Usage
 At startup this flow will read the statistics from a local file `"covid.json"`.  The very first time this local file will not exist and an error message is reported in the dashboard (this is normal).
 So in that case you must retrieve the data from Github by clicking on the button `retrieve data from github`.

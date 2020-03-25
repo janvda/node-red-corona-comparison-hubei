@@ -5,7 +5,9 @@ node-red-corona-comparison-hubei
 
 This node-red flow is creating a dashboard showing the historical statistics of the corona deaths and corona confirmed cases for the selected country or province/state.
 
-The statistics are retrieved from https://github.com/CSSEGISandData/COVID-19
+The statistics are retrieved from [github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19).  More precisely it is based on the following 2 files from this github repository:
+ - [time_series_covid19_deaths_global.csv](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv)
+ - [time_series_covid19_confirmed_global.csv](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv)
 
 It also puts in the same charts the statistics for the province Hubei (China) were the outbreak began.  To make comparison easy I have scaled and shifted the chart for Hubei.
 

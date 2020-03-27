@@ -45,7 +45,3 @@ FYI it is not the retrieving that takes a lot of time but converting the data to
 Once the data is retrieved, you can select the `country`, `province/state` and `lock down date` and the charts will automatically be updated.
 
 You can always refresh the data with the latest available data from github by clicking on the button (but as said this takes several minutes).
-
-
-
-

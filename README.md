@@ -11,17 +11,19 @@ The statistics are retrieved from [github.com/CSSEGISandData/COVID-19](https://g
 
 It also puts in the same charts the statistics for the province Hubei (China) were the outbreak began.  To make comparison easy I have scaled and shifted the chart for Hubei.
 
-## lock down date, hubei date shift and hubei factor
+## Concepts: `"lock down date"`, `"hubei date shift"` and `"hubei factor"`
 
 The time shift (`"hubei date shift"`) is determined by the `"lock down date"` that you can specify.  So the Hubei charts will be shifted so that the lock down date of Hubei (= 23rd of January 2020) falls together with the `"lock down date"` you have specified.
 
-The `"hubei factor"` is the factor used to scale the Hubei deaths and Hubei confirmed cases in the charts.  The `"hubei factor"` is calculated as the ratio of the current total number of deaths for the selected country or province over the total number of deaths in Hubei at corresponding date relative to the start of lock down.
+The `"hubei factor"` is the factor used to scale the Hubei deaths and Hubei confirmed cases in the charts.  The `"hubei factor"` is calculated as the ratio of the current total number of deaths for the selected country or province over the total "smoothed" number of deaths in Hubei at corresponding date relative to the start of lock down.
 
-## Smooth hubei charts
+## Smooth hubei data and charts
 
-It is also possible to smooth the Hubei data in the charts by clicking on the `"smooth Hubei charts"` toggle button.  When activated it has the following effect on the Hubei:
+It is also possible to smooth/unsmooth the Hubei data in the charts by clicking on the `"smooth Hubei charts"` toggle button.
+When not activated it shows the actual Hubei data as retrieved from [github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19)
+When activated (this is the default case) it has the following effect on the Hubei:
 1. The new confirmed cases for days 12, 13 and 14 of February 2020 have been replaced by _interpolated_ values.  This is to get rid of the big spike caused due to the new way of testing at that time.
-2. furthermore the new confirmed cases andnew deatsh for Hubei have been smoothed by taking a weighted running average of 3 points.  So the smoothed value for point i is calculated as 50% of value of point i + 25% of the values of point i-1 and point i+1.
+2. furthermore the new confirmed cases and new deaths for Hubei have been smoothed by taking a weighted running average of 3 points.  So the smoothed value for point i is calculated as 50% of value of point i + 25% of the values of point i-1 and point i+1.
 3. total deaths and total confirmed cases are recalculated based on smoothed new deaths and smoothed new confirmed cases (see points 1 and 2)
 
 Tip: you can also clearly visualize the effect of smoothing by selecting as country "China" and as province/state "Hubei" and then activating the `smooth Hubei charts` toggle button
